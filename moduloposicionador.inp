@@ -1,5 +1,5 @@
 [ T i t l e ]
-Caja acrilico posicionador Hamsters
+Modulo acrilico posicionador Hamsters
 
 [ P a r a m e t e r s ]
  icntl    =          8     # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
