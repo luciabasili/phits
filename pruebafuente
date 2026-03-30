@@ -1,0 +1,32 @@
+[ T i t l e ]
+fuente
+
+[ P a r a m e t e r s ]
+ icntl    =          8     # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
+ maxcas   =          50     # (D=10) number of particles per one batch
+ maxbch   =          200     # (D=10) number of batches
+ 
+[ S o u r c e ]
+   s-type =   1             # fuente axial monocromática
+     proj =  proton         # kind of incident particle         
+      dir =   -1.0           # z-direction of beam [cosine] (va hacia z negativos)
+       r0 =   1.0            # radius [cm]
+       z0 =   0.            # minimum position of z-axis [cm]
+       z1 =   1.0            # maximum position of z-axis [cm]
+       e0 =   150.          # energy of beam [MeV/u]
+
+[ M a t e r i a l ]
+mat[1]  Al       #material de la placa
+mat[2]  C 5 H 8 O 2 #acrilico
+
+[ S u r f a c e ]
+    1  rpp  -4 4 -9 9 -5.3 -5 
+    2  rpp  -2.5 2.5  -7.5 7.5  -11 -6
+    100  so  50.0 $Defino el limite de la geometria
+
+[ C e l l ]
+    11 1 -2.7 -1 $celda placa
+    12 2 -1.18 -2 $celda soporte
+
+    1000 0 -100 #11 #12 $ vacio 
+    1001 -1 100 $ exterior absoluto
